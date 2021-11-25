@@ -6,7 +6,7 @@ include_once "_navbar.php";
     <section class="ftco-section">
         <div class="container">
             <div class="row d-flex">
-                <form action="#" class="w-100 mx-auto p-5 mt-5 shadow rounded bg-white">
+                <form action="#" class="w-100 mx-auto p-5 my-5 shadow rounded bg-white">
                     <h2 class="text-center">Mon compte</h2>
 
                     <section class="d-flex justify-content-between align-items-center">

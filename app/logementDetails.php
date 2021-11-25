@@ -5,10 +5,10 @@ include "_viewDetails.php";
 ?>
 
 
-<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
+<div id="hero" class="hero-wrap" style="background-image: url('images/bg_5.jpg');">
     <div class="overlay"></div>
     <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
+        <div class="row no-gutters slider-text align-items-center justify-content-center" style="height: 40vh"
             data-scrollax-parent="true">
             <div class="col-md-9 ftco-animate text-center">
                 <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
