@@ -85,6 +85,4 @@ include_once "_userDetails.php"
 </div>
 </section>
 </div>
-
-</body>
 <?php include "_footer.php"?>

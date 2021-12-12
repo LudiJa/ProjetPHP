@@ -1,0 +1,30 @@
+<?php
+
+$auth = true;
+require 'includes/connect.php';
+
+
+$getId = explode('=', $_SERVER['HTTP_REFERER'])[1];
+
+
+
+if (!($getId == $_POST['id'])) {
+    header("Location:authAnnonce.php?id=$getId&error=malformedInput");
+    exit();
+}
+    
+$id = intval(htmlspecialchars(trim($_POST['id'])));
+
+try{
+$supprAnnonce = 'DELETE FROM logement WHERE id=:id';
+$reqSupprAnnonce = $connexion->prepare($supprAnnonce);
+$reqSupprAnnonce->bindValue(':id', $id);
+
+$reqSupprAnnonce->execute();   
+    header('Location:authAnnonce.php?success=delete');
+} catch (PDOException $erreur) {    
+    echo $erreur->getMessage();
+    
+    exit();
+}
+?>

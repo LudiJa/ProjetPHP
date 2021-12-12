@@ -4,6 +4,7 @@ include_once "_navbar.php";
 include "_viewLogement.php";
 include '_userDetails.php';
 
+
 $logements = $connexion->query("SELECT logement.*, user.username FROM logement INNER JOIN user on id_user = user.id WHERE user.id = {$_SESSION['id']}");
 ?>
 
@@ -44,6 +45,8 @@ $logements = $connexion->query("SELECT logement.*, user.username FROM logement I
                                                     <span><i class="icon-map-o">
                                                         </i><?php echo $logement['city']; ?>,
                                                         <?php echo $logement['country']; ?></span>
+                                                </p>
+                                                <p class="bottom-area d-flex">
                                                     <span class="ml-auto"><a
                                                             href="logementDetails.php?id=<?php echo $logement['id']; ?>">Details</a></span>
                                                     <span class="ml-auto">

@@ -48,7 +48,7 @@ include "_viewDetails.php";
 
                         <div class="col-md-12 ftco-animate mb-5 mt-4">
                             <h4 class="mb-5">Want to booking ? </h4>
-                            <form class="fields">
+                            <form action="booking_post.php" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -77,58 +77,18 @@ include "_viewDetails.php";
                                     </div>
                                 </div>
                                 <div class="col-md-10 ">
-                                    <div class="form-group">
-                                        <input type="submit" value="Booking" class="btn btn-primary py-3">
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-primary py-3">Booking</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-
-                    <div class="col-md-12 hotel-single ftco-animate mb-5 mt-5">
-                        <h4 class="mb-4">Related Location</h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="destination">
-                                    <a href="hotel-single.html" class="img img-2"
-                                        style="background-image: url(images/hotel-1.jpg);"></a>
-                                    <div class="text p-3">
-                                        <div class="d-flex">
-                                            <div class="one">
-                                                <h3><a href="hotel-single.html">Hotel, Italy</a></h3>
-                                                <p class="rate">
-                                                    <i class="icon-star"></i>
-                                                    <i class="icon-star"></i>
-                                                    <i class="icon-star"></i>
-                                                    <i class="icon-star"></i>
-                                                    <i class="icon-star-o"></i>
-                                                    <span>8 Rating</span>
-                                                </p>
-                                            </div>
-                                            <div class="two">
-                                                <span class="price per-price">$40<br><small>/night</small></span>
-                                            </div>
-                                        </div>
-                                        <p>Far far away, behind the word mountains, far from the countries</p>
-                                        <hr>
-                                        <p class="bottom-area d-flex">
-                                            <span><i class="icon-map-o"></i> Miami, Fl</span>
-                                            <span class="ml-auto"><a href="#">Book Now</a></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
                 </div>
-
             </div>
-        </div> <!-- .col-md-8 -->
+        </div>
     </div>
-    </div>
-</section> <!-- .section -->
+</section>
 
 
 
