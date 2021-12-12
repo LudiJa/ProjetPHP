@@ -6,6 +6,7 @@ include_once "_navbar.php"; ?>
     <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg')">
         <div class="overlay"></div>
         <section class="ftco-section contact-section ftco-degree-bg">
+            <p>username : admin </br> mdp : admin123</p>
             <div class="container">
                 <div class="row d-flex mb-5 contact-info">
                     <div class="col-md-6 pr-md-5">

@@ -7,11 +7,11 @@ include '_userDetails.php';
 $logements = $connexion->query("SELECT logement.*, user.username FROM logement INNER JOIN user on id_user = user.id WHERE user.id = {$_SESSION['id']}");
 ?>
 
-<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_3.jpg')">
+<div class="hero-wrap" style="background-image: url('images/bg_3.jpg')">
     <section class="ftco-section">
         <div class="container">
-            <div class="row d-flex">
-                <h2 class="text-center">Mon compte</h2>
+            <div class="row d-flex w-100 mx-auto p-5 my-5 shadow rounded bg-white">
+                <h2 class="text-center">My rental add</h2>
 
                 <section class="ftco-section ftco-degree-bg">
                     <div class="container">
@@ -44,13 +44,11 @@ $logements = $connexion->query("SELECT logement.*, user.username FROM logement I
                                                     <span><i class="icon-map-o">
                                                         </i><?php echo $logement['city']; ?>,
                                                         <?php echo $logement['country']; ?></span>
-                                                    <?php if ($logement['avaibility'] == 1 ) { ?><span
-                                                        class="ml-auto"><a
-                                                            href="logementDetails.php?id=<?php echo $logement['id']; ?>">Book
-                                                            Now</a></span>
-                                                    <?php  }else{ ?> <span class="ml-auto">Not
-                                                        available</span>
-                                                    <?php } ?>
+                                                    <span class="ml-auto"><a
+                                                            href="logementDetails.php?id=<?php echo $logement['id']; ?>">Details</a></span>
+                                                    <span class="ml-auto">
+                                                        <a
+                                                            href="modifyAnnonce.php?id=<?php echo $logement['id']; ?>">Modify</a></span>
                                                 </p>
                                             </div>
                                         </div>
@@ -62,10 +60,9 @@ $logements = $connexion->query("SELECT logement.*, user.username FROM logement I
 
                         </div>
                     </div>
-                    <a href="page-annonces.php" class="btn btn-primary d-block py-3 px-5 mx-auto">Retour aux
-                        annonces</a>
                 </section>
             </div>
+            <a href="account.php" class="btn btn-primary d-block py-3 px-5 mx-auto">Back to my account</a>
         </div>
     </section>
 </div>
