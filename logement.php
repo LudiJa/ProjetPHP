@@ -34,20 +34,6 @@ $logements = $connexion->query("SELECT logement.*, user.username FROM logement I
                                     name="search">
                             </div>
                             <div class="form-group">
-                                <div class="select-wrap one-third">
-                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                    <select name="" id="" class="form-control" placeholder="Keyword search" id="search"
-                                        name="search">
-                                        <option value="">Select City</option>
-                                        <option value="">Bordeaux</option>
-                                        <option value="">Paris</option>
-                                        <option value="">Lyon</option>
-                                        <option value="">Marseille</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
                                 <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
                             </div>
                         </div>
@@ -71,10 +57,10 @@ $logements = $connexion->query("SELECT logement.*, user.username FROM logement I
                     <?php
         foreach($logements as $logement){
         ?>
-                    <div class="col-md-4 ftco-animate">
+                    <div class="col-md-4 ">
                         <div class="destination">
-                            <img src="<?php echo $logement['image'];?>" class="d-block w-100 img-fluid"
-                                style="object-fit:contain; height:50%;" />
+                            <img src="<?php echo $logement['image'];?>" class="d-block img-fluid"
+                                style="object-fit:cover" />
                             <div class="text p-3">
                                 <div class="d-flex">
                                     <div class="one">
@@ -87,13 +73,13 @@ $logements = $connexion->query("SELECT logement.*, user.username FROM logement I
                                 </div>
                                 <p><?php echo $logement['type']; ?></p>
                                 <hr>
-                                <p class="bottom-area d-flex">
+                                <p class="bottom-area d-flex flex-column">
                                     <span><i class="icon-map-o"> </i><?php echo $logement['city']; ?>,
                                         <?php echo $logement['country']; ?></span>
                                     <?php if ($logement['avaibility'] == 1 ) { ?><span class="ml-auto"><a
                                             href="logementDetails.php?id=<?php echo $logement['id']; ?>">Book
                                             Now</a></span>
-                                    <?php  }else{ ?> <span class="ml-auto">Not
+                                    <?php  }else{ ?> <span class="ml-auto bg-secondary text-white rounded">Not
                                         available</span>
                                     <?php } ?>
                                 </p>

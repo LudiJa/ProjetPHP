@@ -47,8 +47,10 @@ $logements = $connexion->query("SELECT logement.*, user.username FROM logement I
                                                         <?php echo $logement['country']; ?></span>
                                                 </p>
                                                 <p class="bottom-area d-flex">
-                                                    <span class="ml-auto"><a
-                                                            href="logementDetails.php?id=<?php echo $logement['id']; ?>">Details</a></span>
+                                                    <span class="ml-auto px-1 bg-secondary rounded"
+                                                        style="color:white"><a
+                                                            href="
+                                                        logementDetails.php?id=<?php echo $logement['id']; ?>">Details</a></span>
                                                     <span class="ml-auto">
                                                         <a
                                                             href="modifyAnnonce.php?id=<?php echo $logement['id']; ?>">Modify</a></span>

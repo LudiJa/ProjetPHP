@@ -8,7 +8,7 @@ require 'includes/connect.php';
 
     $reqReservation = 'UPDATE logement SET avaibility=:avaibility WHERE id=:id';
     $editReservation = $connexion->prepare($reqReservation);
-    $editReservation->bindValue(':avaibility', true);
+    $editReservation->bindValue(':avaibility', 0);
     $editReservation->bindValue(':id', $id);
 
 $editReservation->execute();

@@ -52,7 +52,8 @@ if (isset($_GET['success'])) {
                         </form>
                     </div>
 
-                    <img src="<?php echo $logement['image']; ?>" alt="rental image" class="img-fluid mb-3">
+                    <img src="<?php echo $logement['image']; ?>" alt="rental image" class="img-fluid my-3"
+                        style="height:400px;">
                     <div class="mb-3">
                         <label for="title" class="form-label">Title *</label>
                         <input type="text" class="form-control" value="<?php echo $logement['title'];?>" name="title">
@@ -102,8 +103,7 @@ if (isset($_GET['success'])) {
                             </div>
                             <div class="mb-3 w-50">
                                 <label for="cp" class="form-label">Code Postal *</label>
-                                <input type="number" class="form-control" value="<?php echo $logement['cp'];?>"
-                                    name="cp">
+                                <input type="text" class="form-control" value="<?php echo $logement['cp'];?>" name="cp">
                             </div>
                         </section>
                         <div class="mb-3">
